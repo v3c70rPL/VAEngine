@@ -10,6 +10,13 @@ namespace VAEngine {
 
 	Application::Application()
 	{
+		VAE_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
+		m_Window = std::unique_ptr<Window>(Window::Create());
+
+		// On each GLFW event callback triggered Application::OnEvent will be used 
+		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
 	}
 
 	Application::~Application()
@@ -46,13 +53,15 @@ namespace VAEngine {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		VAE_CORE_TRACE(e);
-
 		while (m_Running)
 		{
+			glClearColor(0, 153, 1, 0.2);
+			glClear(GL_COLOR_BUFFER_BIT);
+
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			m_Window->OnUpdate();
 		}
 	}
 

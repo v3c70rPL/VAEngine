@@ -38,6 +38,9 @@
       <Filter>VAEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vaepch.h" />
+    <ClInclude Include="src\VAEngine\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\VAEngine\Application.cpp">
@@ -53,5 +56,6 @@
       <Filter>VAEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\vaepch.cpp" />
+    <ClCompile Include="src\VAEngine\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

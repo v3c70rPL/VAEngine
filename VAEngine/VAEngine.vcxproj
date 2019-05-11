@@ -156,10 +156,13 @@
     <ClInclude Include="src\VAEngine\Defines.h" />
     <ClInclude Include="src\VAEngine\Events\ApplicationEvent.h" />
     <ClInclude Include="src\VAEngine\Events\Event.h" />
+    <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\VAEngine\Layer.h" />
     <ClInclude Include="src\VAEngine\LayerStack.h" />
     <ClInclude Include="src\VAEngine\Log.h" />
     <ClInclude Include="src\VAEngine\Main.h" />
+    <ClInclude Include="src\VAEngine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VAEngine\Window.h" />
     <ClInclude Include="src\vaepch.h" />
   </ItemGroup>
@@ -168,6 +171,7 @@
     <ClCompile Include="src\VAEngine\Layer.cpp" />
     <ClCompile Include="src\VAEngine\LayerStack.cpp" />
     <ClCompile Include="src\VAEngine\Log.cpp" />
+    <ClCompile Include="src\VAEngine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\vaepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
