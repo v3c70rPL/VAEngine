@@ -15,10 +15,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7FCF00A4-EB39-B51A-3478-66C0A021936F}</ProjectGuid>
+    <ProjectGuid>{B2FD4E0E-9ECA-A919-C7E3-97C1B30FDFA7}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>va-engine</RootNamespace>
+    <RootNamespace>VAEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -55,23 +55,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\va-engine\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\va-engine\</IntDir>
-    <TargetName>va-engine</TargetName>
+    <OutDir>..\bin\Debug-windows-x86_64\VAEngine\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\VAEngine\</IntDir>
+    <TargetName>VAEngine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\va-engine\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\va-engine\</IntDir>
-    <TargetName>va-engine</TargetName>
+    <OutDir>..\bin\Release-windows-x86_64\VAEngine\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\VAEngine\</IntDir>
+    <TargetName>VAEngine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\va-engine\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\va-engine\</IntDir>
-    <TargetName>va-engine</TargetName>
+    <OutDir>..\bin\Dist-windows-x86_64\VAEngine\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\VAEngine\</IntDir>
+    <TargetName>VAEngine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -79,7 +79,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vaepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_BUILD_DLL;GLFW_INCLUDE_NONE;DE_DEBUG;DE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;VAE_BUILD_DLL;GLFW_INCLUDE_NONE;VAE_DEBUG;VAE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Full</Optimization>
@@ -97,10 +97,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\bin\Debug-windows-x86_64\va-engine\va-engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\VAEngine\VAEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\va-engine\va-engine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\va-engine\va-engine.dll ..\bin\Debug-windows-x86_64\sandbox-app &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\va-engine\va-engine.dll ..\bin\Debug-windows-x86_64\sandbox-app &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\VAEngine\VAEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Debug-windows-x86_64\SandboxApplication &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Debug-windows-x86_64\SandboxApplication &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -108,7 +108,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vaepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_BUILD_DLL;GLFW_INCLUDE_NONE;DE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;VAE_BUILD_DLL;GLFW_INCLUDE_NONE;VAE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -124,10 +124,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\bin\Release-windows-x86_64\va-engine\va-engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Release-windows-x86_64\VAEngine\VAEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\va-engine\va-engine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\va-engine\va-engine.dll ..\bin\Release-windows-x86_64\sandbox-app &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\va-engine\va-engine.dll ..\bin\Release-windows-x86_64\sandbox-app &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\VAEngine\VAEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Release-windows-x86_64\SandboxApplication &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Release-windows-x86_64\SandboxApplication &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -135,7 +135,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>vaepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_BUILD_DLL;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;VAE_BUILD_DLL;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -144,16 +144,30 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\bin\Dist-windows-x86_64\va-engine\va-engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\VAEngine\VAEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\va-engine\va-engine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\va-engine\va-engine.dll ..\bin\Dist-windows-x86_64\sandbox-app &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\va-engine\va-engine.dll ..\bin\Dist-windows-x86_64\sandbox-app &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\VAEngine\VAEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Dist-windows-x86_64\SandboxApplication &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\VAEngine\VAEngine.dll ..\bin\Dist-windows-x86_64\SandboxApplication &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\VAEngine.h" />
+    <ClInclude Include="src\VAEngine\Application.h" />
+    <ClInclude Include="src\VAEngine\Defines.h" />
+    <ClInclude Include="src\VAEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\VAEngine\Events\Event.h" />
+    <ClInclude Include="src\VAEngine\Layer.h" />
+    <ClInclude Include="src\VAEngine\LayerStack.h" />
+    <ClInclude Include="src\VAEngine\Log.h" />
+    <ClInclude Include="src\VAEngine\Main.h" />
+    <ClInclude Include="src\VAEngine\Window.h" />
     <ClInclude Include="src\vaepch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\VAEngine\Application.cpp" />
+    <ClCompile Include="src\VAEngine\Layer.cpp" />
+    <ClCompile Include="src\VAEngine\LayerStack.cpp" />
+    <ClCompile Include="src\VAEngine\Log.cpp" />
     <ClCompile Include="src\vaepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

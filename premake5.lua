@@ -1,6 +1,6 @@
-workspace "va-engine"
+workspace "VAEngine"
 	architecture "x64"
-	startproject "sandbox-app"
+	startproject "SandboxApplication"
 
 	configurations
 	{
@@ -12,16 +12,16 @@ workspace "va-engine"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
-IncludeDir["GLFW"] = "va-engine/vendor/GLFW/include"
-IncludeDir["Glad"] = "va-engine/vendor/Glad/include"
-IncludeDir["Imgui"] = "va-engine/vendor/imgui"
+IncludeDir["GLFW"] = "VAEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "VAEngine/vendor/Glad/include"
+IncludeDir["Imgui"] = "VAEngine/vendor/imgui"
 
-include "va-engine/vendor/GLFW"
-include "va-engine/vendor/Glad"
-include "va-engine/vendor/imgui"
+include "VAEngine/vendor/GLFW"
+include "VAEngine/vendor/Glad"
+include "VAEngine/vendor/imgui"
 
-project "va-engine"
-	location "va-engine"
+project "VAEngine"
+	location "VAEngine"
 	kind "SharedLib"
 	language "C++"
 
@@ -29,7 +29,7 @@ project "va-engine"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "vaepch.h"
-	pchsource "va-engine/src/vaepch.cpp"
+	pchsource "VAEngine/src/vaepch.cpp"
 
 	files
 	{
@@ -61,33 +61,33 @@ project "va-engine"
 		 
 		defines
 		{
-			"DE_PLATFORM_WINDOWS",
-			"DE_BUILD_DLL",
+			"VAE_PLATFORM_WINDOWS",
+			"VAE_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/sandbox-app")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandboxApplication")
 		}
 
 	filter "configurations:Debug"
-		defines "DE_DEBUG"
+		defines "VAE_DEBUG"
 		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "DE_RELEASE"
+		defines "VAE_RELEASE"
 		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Debug"
-		defines "DE_DIST"
+		defines "VAE_DIST"
 		buildoptions "/MDd"
 		optimize "On"
 
-project "sandbox-app"
-	location "sandbox-app"
+project "SandboxApplication"
+	location "SandboxApplication"
 	kind "ConsoleApp"
 	language "C++"
 
@@ -102,13 +102,13 @@ project "sandbox-app"
 
 	includedirs
 	{
-		"va-engine/vendor/spdlog/include",
-		"va-engine/src"
+		"VAEngine/vendor/spdlog/include",
+		"VAEngine/src"
 	}
 
 	links
 	{
-		"va-engine"
+		"VAEngine"
 	}
 
 	filter "system:windows"
@@ -118,20 +118,20 @@ project "sandbox-app"
 
 		defines
 		{
-			"DE_PLATFORM_WINDOWS"
+			"VAE_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
-		defines "DE_DEBUG"
+		defines "VAE_DEBUG"
 		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "DE_RELEASE"
+		defines "VAE_RELEASE"
 		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Debug"
-		defines "DE_DIST"
+		defines "VAE_DIST"
 		buildoptions "/MDd"
 		optimize "On"

@@ -15,10 +15,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A29C8D36-0E52-062C-9746-000303FBFC2F}</ProjectGuid>
+    <ProjectGuid>{68380E0A-541C-CF5F-BD7C-C9B2A97FB9E1}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>sandbox-app</RootNamespace>
+    <RootNamespace>SandboxApplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -55,31 +55,31 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\sandbox-app\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\sandbox-app\</IntDir>
-    <TargetName>sandbox-app</TargetName>
+    <OutDir>..\bin\Debug-windows-x86_64\SandboxApplication\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\SandboxApplication\</IntDir>
+    <TargetName>SandboxApplication</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\sandbox-app\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\sandbox-app\</IntDir>
-    <TargetName>sandbox-app</TargetName>
+    <OutDir>..\bin\Release-windows-x86_64\SandboxApplication\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\SandboxApplication\</IntDir>
+    <TargetName>SandboxApplication</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\sandbox-app\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\sandbox-app\</IntDir>
-    <TargetName>sandbox-app</TargetName>
+    <OutDir>..\bin\Dist-windows-x86_64\SandboxApplication\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\SandboxApplication\</IntDir>
+    <TargetName>SandboxApplication</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_DEBUG;DE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\va-engine\vendor\spdlog\include;..\va-engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;VAE_DEBUG;VAE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\VAEngine\vendor\spdlog\include;..\VAEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -101,8 +101,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\va-engine\vendor\spdlog\include;..\va-engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;VAE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\VAEngine\vendor\spdlog\include;..\VAEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -122,8 +122,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\va-engine\vendor\spdlog\include;..\va-engine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VAE_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\VAEngine\vendor\spdlog\include;..\VAEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -136,8 +136,8 @@
     <ClCompile Include="src\Sandbox.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\va-engine\va-engine.vcxproj">
-      <Project>{7FCF00A4-EB39-B51A-3478-66C0A021936F}</Project>
+    <ProjectReference Include="..\VAEngine\VAEngine.vcxproj">
+      <Project>{B2FD4E0E-9ECA-A919-C7E3-97C1B30FDFA7}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

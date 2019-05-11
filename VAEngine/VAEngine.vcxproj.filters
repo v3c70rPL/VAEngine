@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VAEngine">
+      <UniqueIdentifier>{B2FD4E0E-9ECA-A919-C7E3-97C1B30FDFA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VAEngine\Events">
+      <UniqueIdentifier>{560D2C4B-C298-990F-CBA9-1C0437B4F50F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\VAEngine.h" />
+    <ClInclude Include="src\VAEngine\Application.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Defines.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Events\ApplicationEvent.h">
+      <Filter>VAEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Events\Event.h">
+      <Filter>VAEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Layer.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\LayerStack.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Log.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Main.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Window.h">
+      <Filter>VAEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vaepch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\VAEngine\Application.cpp">
+      <Filter>VAEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VAEngine\Layer.cpp">
+      <Filter>VAEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VAEngine\LayerStack.cpp">
+      <Filter>VAEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VAEngine\Log.cpp">
+      <Filter>VAEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vaepch.cpp" />
+  </ItemGroup>
+</Project>
