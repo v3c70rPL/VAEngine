@@ -1,0 +1,9 @@
+[submodule "va-engine/vendor/spdlog"]
+	path = va-engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "va-engine/vendor/GLFW"]
+	path = va-engine/vendor/GLFW
+	url = https://github.com/v3c70rPL/glfw
+[submodule "va-engine/vendor/imgui"]
+	path = va-engine/vendor/imgui
+	url = https://github.com/v3c70rPL/imgui
