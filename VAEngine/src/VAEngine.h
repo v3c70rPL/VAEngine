@@ -4,7 +4,7 @@
 #include "VAEngine/Application.h"
 #include "VAEngine/Layer.h"
 #include "VAEngine/Log.h"
-//#include "DemoEngine/ImGui/ImGuiLayer.h"
+#include "VAEngine/ImGui/ImGuiLayer.h"
 
 // --------- Entry Point ---------------------
 #include "VAEngine/Main.h"

@@ -38,9 +38,11 @@
       <Filter>VAEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vaepch.h" />
-    <ClInclude Include="src\VAEngine\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\VAEngine\Application.cpp">
@@ -56,6 +58,8 @@
       <Filter>VAEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\vaepch.cpp" />
-    <ClCompile Include="src\VAEngine\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
