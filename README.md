@@ -1,7 +1,7 @@
 # VAEngine
 Visual Applications Engine
 
-Engine created for learning purpose and code demonstration.
+Engine created for learning purpose and code demonstration. This is still work in progress ...
 The main goal is to create game engine that can be used for game developemnt or visual application development.
 
 Used libraries:
