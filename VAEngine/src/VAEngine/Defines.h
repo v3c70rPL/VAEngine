@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef VAE_PLATFORM_WINDOWS
+#if VAE_DYNAMIC_LINK
 	#ifdef VAE_BUILD_DLL
 		#define VAE_API __declspec(dllexport)
 	#else 
 		#define VAE_API __declspec(dllimport)
 	#endif
+#else
+	#define VAE_API
+#endif
 #else
 	#error Visual Applications Engine only support Windows
 #endif

@@ -22,8 +22,10 @@ include "VAEngine/vendor/imgui"
 
 project "VAEngine"
 	location "VAEngine"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -36,6 +38,11 @@ project "VAEngine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
+	}	
 
 	includedirs
 	{
@@ -55,8 +62,6 @@ project "VAEngine"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 		 
 		defines
@@ -66,30 +71,27 @@ project "VAEngine"
 			"GLFW_INCLUDE_NONE"
 		}
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandboxApplication")
-		}
-
 	filter "configurations:Debug"
 		defines "VAE_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "VAE_RELEASE"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Debug"
 		defines "VAE_DIST"
-		buildoptions "/MDd"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 project "SandboxApplication"
 	location "SandboxApplication"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -112,9 +114,8 @@ project "SandboxApplication"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
+		staticruntime "on"
 
 		defines
 		{
@@ -123,15 +124,15 @@ project "SandboxApplication"
 
 	filter "configurations:Debug"
 		defines "VAE_DEBUG"
-		buildoptions "/MDd"
-		symbols "On"
+		runtime "Debug"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "VAE_RELEASE"
-		buildoptions "/MD"
-		optimize "On"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Debug"
 		defines "VAE_DIST"
-		buildoptions "/MDd"
-		optimize "On"
+		runtime "Release"
+		optimize "on"

@@ -55,7 +55,7 @@ namespace VAEngine {
 	{
 		while (m_Running)
 		{
-			glClearColor(0, 153, 1, 0.2);
+			glClearColor(0.2f, 0.2f, 0.2f, 0.2f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack)

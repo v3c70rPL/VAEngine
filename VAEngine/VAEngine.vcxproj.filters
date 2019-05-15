@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="VAEngine">
       <UniqueIdentifier>{B2FD4E0E-9ECA-A919-C7E3-97C1B30FDFA7}</UniqueIdentifier>
     </Filter>
     <Filter Include="VAEngine\Events">
       <UniqueIdentifier>{560D2C4B-C298-990F-CBA9-1C0437B4F50F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="VAEngine\ImGui">
+      <UniqueIdentifier>{5C70DF57-483E-D35D-31D2-43841D3FAFC2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\VAEngine.h" />
     <ClInclude Include="src\VAEngine\Application.h">
       <Filter>VAEngine</Filter>
@@ -21,6 +39,15 @@
     </ClInclude>
     <ClInclude Include="src\VAEngine\Events\Event.h">
       <Filter>VAEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Events\KeyEvent.h">
+      <Filter>VAEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\Events\MouseEvent.h">
+      <Filter>VAEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h">
+      <Filter>VAEngine\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\VAEngine\Layer.h">
       <Filter>VAEngine</Filter>
@@ -38,15 +65,19 @@
       <Filter>VAEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vaepch.h" />
-    <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
-    <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\VAEngine\Application.cpp">
       <Filter>VAEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>VAEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\VAEngine\Layer.cpp">
       <Filter>VAEngine</Filter>
@@ -58,8 +89,5 @@
       <Filter>VAEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\vaepch.cpp" />
-    <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
