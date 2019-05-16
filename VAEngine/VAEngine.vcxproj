@@ -140,7 +140,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VAEngine.h" />
@@ -153,20 +152,21 @@
     <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\VAEngine\Input\Input.h" />
     <ClInclude Include="src\VAEngine\Input\KeyCodes.h" />
+    <ClInclude Include="src\VAEngine\Input\MouseButtonCodes.h" />
     <ClInclude Include="src\VAEngine\Layer.h" />
     <ClInclude Include="src\VAEngine\LayerStack.h" />
     <ClInclude Include="src\VAEngine\Log.h" />
     <ClInclude Include="src\VAEngine\Main.h" />
-    <ClInclude Include="src\VAEngine\Input\MouseButtonCodes.h" />
     <ClInclude Include="src\VAEngine\Window.h" />
     <ClInclude Include="src\vaepch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\VAEngine\Application.cpp" />
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiDockDemoWindow.cpp" />
     <ClCompile Include="src\VAEngine\Layer.cpp" />
     <ClCompile Include="src\VAEngine\LayerStack.cpp" />
     <ClCompile Include="src\VAEngine\Log.cpp" />

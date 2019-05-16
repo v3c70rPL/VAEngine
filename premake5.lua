@@ -105,7 +105,8 @@ project "SandboxApplication"
 	includedirs
 	{
 		"VAEngine/vendor/spdlog/include",
-		"VAEngine/src"
+		"VAEngine/src",
+		"VAEngine/vendor"
 	}
 
 	links

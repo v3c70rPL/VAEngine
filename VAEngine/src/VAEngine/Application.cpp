@@ -17,6 +17,9 @@ namespace VAEngine {
 
 		// On each GLFW event callback triggered Application::OnEvent will be used 
 		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
+
+		m_ImGuilLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuilLayer);
 	}
 
 	Application::~Application()
@@ -34,7 +37,7 @@ namespace VAEngine {
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}
-
+	 
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
@@ -60,6 +63,11 @@ namespace VAEngine {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			m_ImGuilLayer->Begin();
+			for (Layer* layer : m_LayerStack)
+				layer->OnImGuiRender();
+			m_ImGuilLayer->End();
 
 			m_Window->OnUpdate();
 		}

@@ -1,4 +1,5 @@
 #include <VAEngine.h>
+#include "imgui/imgui.h"
 
 class ExampleLayer : public VAEngine::Layer
 {
@@ -9,6 +10,13 @@ public:
 
 	void OnUpdate() override
 	{
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("ExampleLayer");
+		ImGui::Text("Hello World from Example Layer ");
+		ImGui::End();
 	}
 
 	void OnEvent(VAEngine::Event& event) override
@@ -23,7 +31,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new VAEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

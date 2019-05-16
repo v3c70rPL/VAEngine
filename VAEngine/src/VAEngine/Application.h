@@ -4,8 +4,9 @@
 
 #include "VAEngine/Window.h"
 #include "VAEngine/LayerStack.h"
-#include "Events/Event.h"
+#include "VAEngine/Events/Event.h"
 #include "VAEngine/Events/ApplicationEvent.h"
+#include "VAEngine/ImGui/ImGuiLayer.h"
 
 namespace VAEngine {
 
@@ -27,7 +28,8 @@ namespace VAEngine {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window>m_Window;
-		bool m_Running = true;
+		ImGuiLayer* m_ImGuilLayer;
+				bool m_Running = true;
 		LayerStack m_LayerStack;
 		static Application* s_Instance;
 	};
