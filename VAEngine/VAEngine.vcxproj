@@ -140,6 +140,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VAEngine.h" />
@@ -157,16 +158,18 @@
     <ClInclude Include="src\VAEngine\LayerStack.h" />
     <ClInclude Include="src\VAEngine\Log.h" />
     <ClInclude Include="src\VAEngine\Main.h" />
+    <ClInclude Include="src\VAEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\VAEngine\Window.h" />
     <ClInclude Include="src\vaepch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\VAEngine\Application.cpp" />
     <ClCompile Include="src\VAEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\VAEngine\ImGui\ImGuiDockDemoWindow.cpp" />
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiDockDemoWindow.h" />
     <ClCompile Include="src\VAEngine\Layer.cpp" />
     <ClCompile Include="src\VAEngine\LayerStack.cpp" />
     <ClCompile Include="src\VAEngine\Log.cpp" />

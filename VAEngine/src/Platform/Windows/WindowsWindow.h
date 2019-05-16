@@ -1,8 +1,9 @@
 #pragma once
 
 #include "VAEngine/Window.h"
-
+#include "VAEngine/Renderer/GraphicsContext.h"
 #include <GLFW/glfw3.h>
+
 
 namespace VAEngine
 {
@@ -28,6 +29,7 @@ namespace VAEngine
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context; 
 
 		struct WindowData
 		{

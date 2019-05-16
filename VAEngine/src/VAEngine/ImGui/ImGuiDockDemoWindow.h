@@ -1,7 +1,10 @@
+#pragma once
+
 #include "vaepch.h"
 #include "imgui.h"
 
-void ShowExampleAppDockSpace(bool* p_open)
+// TEMP demo window
+inline void ShowDockDemoWindow(bool* p_open)
 {
 	static bool opt_fullscreen_persistant = true;
 	bool opt_fullscreen = opt_fullscreen_persistant;

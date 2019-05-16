@@ -12,7 +12,7 @@
 #include <glad/glad.h>
 
 // temp for demo show
-#include "ImGuiDockDemoWindow.cpp"
+#include "ImGuiDockDemoWindow.h"
 
 namespace VAEngine
 {
@@ -89,7 +89,7 @@ namespace VAEngine
 	void ImGuiLayer::OnImGuiRender()
 	{
 		static bool show = true;
-		ShowExampleAppDockSpace(&show);
+		ShowDockDemoWindow(&show);
 		ImGui::ShowDemoWindow(&show);
 	}
 

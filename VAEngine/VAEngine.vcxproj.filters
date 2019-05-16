@@ -74,6 +74,8 @@
       <Filter>VAEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vaepch.h" />
+    <ClInclude Include="src\VAEngine\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
@@ -101,6 +103,7 @@
       <Filter>VAEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\vaepch.cpp" />
-    <ClCompile Include="src\VAEngine\ImGui\ImGuiDockDemoWindow.cpp" />
+    <ClCompile Include="src\VAEngine\ImGui\ImGuiDockDemoWindow.h" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
   </ItemGroup>
 </Project>
