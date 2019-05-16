@@ -151,11 +151,13 @@
     <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\VAEngine\Input.h" />
+    <ClInclude Include="src\VAEngine\Input\Input.h" />
+    <ClInclude Include="src\VAEngine\Input\KeyCodes.h" />
     <ClInclude Include="src\VAEngine\Layer.h" />
     <ClInclude Include="src\VAEngine\LayerStack.h" />
     <ClInclude Include="src\VAEngine\Log.h" />
     <ClInclude Include="src\VAEngine\Main.h" />
+    <ClInclude Include="src\VAEngine\Input\MouseButtonCodes.h" />
     <ClInclude Include="src\VAEngine\Window.h" />
     <ClInclude Include="src\vaepch.h" />
   </ItemGroup>

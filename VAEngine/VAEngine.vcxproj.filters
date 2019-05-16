@@ -65,8 +65,10 @@
       <Filter>VAEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\vaepch.h" />
-    <ClInclude Include="src\VAEngine\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\VAEngine\Input\Input.h" />
+    <ClInclude Include="src\VAEngine\Input\KeyCodes.h" />
+    <ClInclude Include="src\VAEngine\Input\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">

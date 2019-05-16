@@ -1,6 +1,6 @@
 #pragma once
 
-#include "VAEngine/Input.h"
+#include "VAEngine/Input/Input.h"
 
 namespace VAEngine
 {
