@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\VAEngine.h" />
     <ClInclude Include="src\VAEngine\Application.h" />
@@ -150,6 +151,7 @@
     <ClInclude Include="src\VAEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\VAEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\VAEngine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\VAEngine\Input.h" />
     <ClInclude Include="src\VAEngine\Layer.h" />
     <ClInclude Include="src\VAEngine\LayerStack.h" />
     <ClInclude Include="src\VAEngine\Log.h" />
@@ -159,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\VAEngine\Application.cpp" />
     <ClCompile Include="src\VAEngine\ImGui\ImGuiLayer.cpp" />
